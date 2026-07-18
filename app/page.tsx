@@ -51,9 +51,9 @@ const controls = [
     text: "An ISMS control blueprint covering risk, access reviews, vendor governance and business continuity.",
   },
   {
-    tag: "Evidence ready",
-    title: "SOC 2 readiness track",
-    text: "Control ownership, evidence collection and audit preparation designed into the launch operating model.",
+    tag: "AI governance",
+    title: "Client-policy aligned AI",
+    text: "AI use cases run only through approved tools, licensed environments and data-handling rules—with human review.",
   },
 ];
 
@@ -69,16 +69,15 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <div className="eyebrow eyebrow-light">
-                <span className="pulse-dot" /> US-first RCM partnership · India delivery
+                <span className="pulse-dot" /> AI-enabled RCM partnership · Built around your workflows
               </div>
               <h1>
                 Recover every dollar <span>you&apos;ve earned.</span>
               </h1>
               <p className="hero-lead">
-                Medzperfect is a specialist medical-billing and denial-recovery
-                partner for US providers—bringing experienced operations,
-                transparent reporting and a security-first offshore model to every
-                claim.
+                Medzperfect is an AI-enabled revenue cycle partner for US
+                healthcare providers—combining experienced operators, client-approved
+                technology and transparent reporting to improve every claim outcome.
               </p>
               <div className="hero-actions">
                 <Link className="button button-white" href="/contact">
@@ -89,9 +88,9 @@ export default function Home() {
                 </a>
               </div>
               <div className="hero-assurance">
-                <span>✓ No-cost discovery</span>
+                <span>✓ Client-policy aligned AI</span>
+                <span>✓ Zero-retention capable</span>
                 <span>✓ BAA-ready engagement</span>
-                <span>✓ US-hours coverage</span>
               </div>
             </div>
 
@@ -151,8 +150,8 @@ export default function Home() {
             <span className="trust-label">Designed for confidence</span>
             <span className="trust-item"><i>✓</i> HIPAA &amp; BAA ready</span>
             <span className="trust-item"><i>◇</i> ISO 27001 aligned</span>
-            <span className="trust-item"><i>◎</i> SOC 2 roadmap</span>
-            <span className="trust-item"><i>⌁</i> VPN-first delivery</span>
+            <span className="trust-item"><i>◎</i> Zero-retention workflows</span>
+            <span className="trust-item"><i>⌁</i> Client-approved AI</span>
           </div>
         </section>
 
@@ -164,8 +163,8 @@ export default function Home() {
                 <h2>Experience that arrives before the first claim.</h2>
               </div>
               <div className="stat-block">
-                <strong>23<span>+</span></strong>
-                <p>combined years across healthcare RCM, AR and operations</p>
+                <strong>50<span>+</span></strong>
+                <p>combined leadership years across RCM, AI, product, data, research and L&amp;D</p>
               </div>
               <div className="stat-block">
                 <strong>200<span>+</span></strong>
@@ -206,7 +205,7 @@ export default function Home() {
               <p>Recurring payer and documentation issues stay hidden without root-cause ownership.</p>
               <div className="challenge-line"><i className="line-low" /><i className="line-high" /></div>
             </article>
-            <article className="challenge-card challenge-card-dark">
+            <article className="challenge-card">
               <span>02</span>
               <h3>AR keeps ageing</h3>
               <p>Inconsistent touch cadence lets recoverable balances cross costly ageing bands.</p>
@@ -272,42 +271,34 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="delivery-section section-pad">
-          <div className="container two-column-intro">
-            <div>
-              <span className="eyebrow">How we deliver</span>
-              <h2>US accountability. India delivery excellence.</h2>
+        <section className="ai-section section-pad">
+          <div className="container ai-layout">
+            <div className="ai-intro">
+              <span className="eyebrow">AI-enabled RCM</span>
+              <h2>Practical intelligence inside the revenue workflow.</h2>
+              <p>
+                We apply AI where it helps operators decide and act faster—within
+                each client&apos;s AI policy, licensed toolset, security controls and
+                approval model.
+              </p>
             </div>
-            <p>
-              A Portland-facing commercial and client-success layer works with a
-              Chennai operations hub—creating responsive US coverage with a scalable,
-              controlled delivery engine.
-            </p>
+            <div className="ai-policy-card">
+              <span>ZERO-RETENTION CAPABLE</span>
+              <h3>Your tools. Your tenant. Your rules.</h3>
+              <p>
+                Where customer licensing supports it, workflows can run inside
+                approved environments with zero retention, no model training and no
+                local storage. Otherwise, AI use is limited to de-identified inputs
+                and policy-approved processes.
+              </p>
+              <div><i>✓</i> Human review before consequential action</div>
+            </div>
           </div>
-          <div className="container delivery-map">
-            <div className="location-card location-us">
-              <span className="location-flag">US</span>
-              <small>Client partnership</small>
-              <h3>Portland, Oregon</h3>
-              <ul>
-                <li>US contracting &amp; sales</li>
-                <li>Client success governance</li>
-                <li>Business-hours escalation</li>
-              </ul>
-            </div>
-            <div className="connection-line" aria-hidden="true">
-              <span>Secure handoff</span><i /><b>↗</b>
-            </div>
-            <div className="location-card location-india">
-              <span className="location-flag">IN</span>
-              <small>Delivery operations</small>
-              <h3>Chennai, India</h3>
-              <ul>
-                <li>RCM &amp; billing specialists</li>
-                <li>VPN-controlled access</li>
-                <li>Scalable, trained pods</li>
-              </ul>
-            </div>
+          <div className="container ai-usecase-grid">
+            <article><span>01</span><h3>Denial intelligence</h3><p>Cluster payer, CARC/RARC and documentation patterns to surface root causes and draft evidence-led next actions.</p><small>Pattern detection · Appeal support</small></article>
+            <article><span>02</span><h3>AR worklist prioritization</h3><p>Rank follow-up using balance, ageing, payer behavior, prior touches, filing limits and client-defined recovery rules.</p><small>Next-best action · Queue focus</small></article>
+            <article><span>03</span><h3>Remittance &amp; workflow quality</h3><p>Assist with ERA/EOB summarization, note structuring and exception identification while operators validate every output.</p><small>Quality checks · Structured notes</small></article>
+            <article><span>04</span><h3>Revenue performance intelligence</h3><p>Turn operational data into trends, risk signals and recommended actions for denials, clean claims, ageing and productivity.</p><small>Actionable reporting · Forecasting</small></article>
           </div>
         </section>
 
@@ -348,15 +339,16 @@ export default function Home() {
               <h2>Operators, not observers.</h2>
               <p>
                 Anitha and Monisha bring hands-on experience across client delivery,
-                AR, medical billing, transition and large-team operations—supported by
-                leaders in customer success, sales and capability development.
+                AR, medical billing, transition and scaled operations—supported by a
+                leadership collective spanning AI-enabled RCM, product engineering,
+                databases, ETL, research, customer success, sales and L&amp;D.
               </p>
               <Link className="button button-navy" href="/team">Meet the leadership team</Link>
             </div>
             <div className="leader-stack">
-              <div className="leader-chip leader-chip-one"><i>AG</i><div><strong>Anitha G</strong><span>Client delivery &amp; account leadership</span></div></div>
+              <div className="leader-chip leader-chip-one"><i>AG</i><div><strong>Anitha G</strong><span>Founder &amp; CEO</span></div></div>
               <div className="leader-chip leader-chip-two"><i>MA</i><div><strong>Monisha A</strong><span>RCM operations &amp; quality</span></div></div>
-              <div className="leader-chip leader-chip-three"><i>+3</i><div><strong>Specialist leaders</strong><span>Customer success, sales &amp; L&amp;D</span></div></div>
+              <div className="leader-chip leader-chip-three"><i>50+</i><div><strong>Combined leadership years</strong><span>RCM, AI, product, data, research &amp; L&amp;D</span></div></div>
             </div>
           </div>
         </section>
@@ -373,8 +365,8 @@ export default function Home() {
                 <p>Yes. Discovery maps your current platform, payer mix, access model and reporting needs before transition planning begins.</p>
               </details>
               <details>
-                <summary>How does the India delivery model protect PHI?<span>+</span></summary>
-                <p>The operating blueprint uses managed VPN access, role-based permissions, controlled endpoints, workforce policies and BAA-led data handling.</p>
+                <summary>How does Medzperfect protect PHI in remote workflows?<span>+</span></summary>
+                <p>The operating blueprint uses client-approved environments, managed VPN access, role-based permissions, controlled endpoints, workforce policies and BAA-led data handling.</p>
               </details>
               <details>
                 <summary>Do we have to outsource the full revenue cycle?<span>+</span></summary>

@@ -15,11 +15,11 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(origin),
     title: { default: "Medzperfect | RCM & Medical Billing", template: "%s | Medzperfect" },
-    description: "Medical billing, AR follow-up and denial recovery for US healthcare providers, delivered securely from India.",
+    description: "AI-enabled medical billing, AR follow-up and denial recovery for US healthcare providers, governed by client-approved tools and policies.",
     icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
     openGraph: {
       title: "Medzperfect — Recover every dollar you've earned.",
-      description: "Specialist medical billing and denial recovery for US providers.",
+      description: "AI-enabled medical billing and denial recovery for US providers.",
       type: "website",
       siteName: "Medzperfect",
       images: [{ url: `${origin}/og.png`, width: 1734, height: 905, alt: "Medzperfect medical billing and revenue recovery" }],
@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: "Medzperfect — Recover every dollar you've earned.",
-      description: "Specialist medical billing and denial recovery for US providers.",
+      description: "AI-enabled medical billing and denial recovery for US providers.",
       images: [`${origin}/og.png`],
     },
   };

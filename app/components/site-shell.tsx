@@ -16,7 +16,6 @@ export function BrandLogo({ inverse = false }: { inverse?: boolean }) {
 
 export function Header({ active }: { active: ActivePage }) {
   const nav = [
-    { href: "/", label: "Home", id: "home" },
     { href: "/#services", label: "Services", id: "services" },
     { href: "/team", label: "Leadership", id: "team" },
     { href: "/contact", label: "Contact", id: "contact" },
@@ -26,8 +25,8 @@ export function Header({ active }: { active: ActivePage }) {
     <>
       <div className="topbar">
         <div className="container topbar-inner">
-          <span>US-first revenue cycle partnership</span>
-          <div><a href="tel:+13507858439">US +1 (350) 785-8439</a><i /> <a href="tel:+919677896274">IN +91 96778 96274</a></div>
+          <span>AI-enabled revenue cycle partnership</span>
+          <div><a href="tel:+15417222194">US +1 541 7222194</a></div>
         </div>
       </div>
       <header className="site-header">
@@ -58,7 +57,7 @@ export function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <BrandLogo inverse />
-          <p>Specialist medical billing, AR and denial recovery for US healthcare providers—delivered securely from India.</p>
+          <p>AI-enabled medical billing, AR and denial recovery for US healthcare providers—governed by your workflows, tools and policies.</p>
           <div className="footer-status"><span>●</span> Now onboarding pilot partnerships</div>
         </div>
         <div>
@@ -70,12 +69,7 @@ export function Footer() {
         <div>
           <h3>US office</h3>
           <address>1120 SW 5th Avenue<br />1st Floor<br />Portland, OR 97204, USA</address>
-          <a href="tel:+13507858439">+1 (350) 785-8439</a>
-        </div>
-        <div>
-          <h3>India office</h3>
-          <address>10/2, First Floor, Gandhi Nagar<br />Keelkattalai<br />Chennai 600117, India</address>
-          <a href="tel:+919677896274">+91 96778 96274</a>
+          <a href="tel:+15417222194">+1 541 7222194</a>
         </div>
       </div>
       <div className="container footer-bottom">

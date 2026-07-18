@@ -35,8 +35,13 @@ test("includes contact and compliance details", async () => {
   const contactHtml = await contact.text();
   assert.match(homeHtml, /HIPAA-aligned operating model/);
   assert.match(homeHtml, /ISO\/IEC 27001 aligned/);
+  assert.match(homeHtml, /AI-enabled RCM/);
+  assert.match(homeHtml, /Zero-retention/);
+  assert.doesNotMatch(homeHtml, /SOC\s*2|Chennai|Gandhi Nagar|India delivery/i);
   assert.match(contactHtml, /1120 SW 5th Avenue/);
   assert.match(contactHtml, /10\/2, First Floor, Gandhi Nagar/);
-  assert.match(contactHtml, /\+1 \(350\) 785-8439/);
+  assert.match(contactHtml, /\+1 541 7222194/);
   assert.match(contactHtml, /\+91 96778 96274/);
+  assert.match(contactHtml, /formsubmit\.co\/(?:ajax\/)?ranjith\.raja90@gmail\.com/);
+  assert.doesNotMatch(contactHtml, /SOC\s*2/i);
 });

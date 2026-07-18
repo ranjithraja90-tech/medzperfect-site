@@ -39,8 +39,8 @@ export default function TeamPage() {
             </div>
             <div className="team-hero-proof">
               <span>Leadership experience</span>
-              <strong>23+<small> years</small></strong>
-              <div><i /> Medical billing <i /> AR recovery <i /> Operations</div>
+              <strong>50+<small> years</small></strong>
+              <div><i /> RCM &amp; AI <i /> Product &amp; data <i /> Research &amp; L&amp;D</div>
             </div>
           </div>
         </section>
@@ -56,23 +56,22 @@ export default function TeamPage() {
               <div className="founder-top">
                 <div className="avatar avatar-anitha">AG</div>
                 <div className="founder-title">
-                  <span>Co-founder</span>
+                  <span>Founder &amp; CEO</span>
                   <h2>Anitha G</h2>
-                  <strong>VP, Client Delivery</strong>
+                  <strong>Chief Executive Officer</strong>
                 </div>
                 <div className="founder-mark">01</div>
               </div>
-              <p className="founder-lead">A client-facing RCM leader who combines account stewardship, project governance and hands-on AR experience.</p>
+              <p className="founder-lead">A client-facing RCM executive who combines account stewardship, delivery governance and hands-on revenue cycle leadership.</p>
               <div className="bio-grid">
-                <div><span>12+ years</span><p>across AR, RCM operations and project leadership</p></div>
-                <div><span>550/week</span><p>high-volume enquiry workload managed in prior AR delivery</p></div>
+                <div><span>18+ years</span><p>across AR, RCM operations, account leadership and delivery governance</p></div>
+                <div><span>Client-first</span><p>executive ownership from discovery and transition through steady-state delivery</p></div>
               </div>
               <ul className="expertise-list">
                 <li>Client needs, status governance and executive communication</li>
                 <li>Agile project delivery and cross-functional coordination</li>
                 <li>Process improvement, mentoring and performance accountability</li>
               </ul>
-              <div className="career-line"><span>Ajuba</span><i /> <span>DigiClarityRCM</span><i /> <span>Omega Healthcare</span><i /> <span>Guidehouse</span></div>
             </article>
 
             <article className="founder-card founder-monisha">
@@ -88,14 +87,13 @@ export default function TeamPage() {
               <p className="founder-lead">A scale-focused operations leader with deep experience in people management, billing, AR governance and quality.</p>
               <div className="bio-grid">
                 <div><span>200+ FTE</span><p>led across voice and non-voice operations</p></div>
-                <div><span>5 LOBs</span><p>managed with SLA, quality and profitability ownership</p></div>
+                <div><span>95%+</span><p>prior team SLA and quality performance</p></div>
               </div>
               <ul className="expertise-list">
                 <li>Healthcare operations, workforce planning and profitability</li>
                 <li>ISO and SOX audit participation, BCP and process transition</li>
                 <li>95%+ prior team SLA and quality performance</li>
               </ul>
-              <div className="career-line"><span>Omega Healthcare</span><i /> <span>HCL</span><i /> <span>Qway</span><i /> <span>Guidehouse</span></div>
             </article>
           </div>
         </section>
