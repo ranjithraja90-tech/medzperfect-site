@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Medzperfect Cross and Approve Arrow mark">
+  <defs><linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E76BC"/><stop offset="1" stop-color="#0A2E5C"/></linearGradient></defs>
+  <rect x="38" y="8" width="24" height="84" rx="11" fill="url(#brand)"/>
+  <rect x="8" y="38" width="84" height="24" rx="11" fill="url(#brand)"/>
+  <circle cx="50" cy="50" r="18" fill="#fff"/>
+  <path d="M42 50l6 6 11-13" fill="none" stroke="#17B3B0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M69 30h8v8M60 39l17-9" fill="none" stroke="#2FB56E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
