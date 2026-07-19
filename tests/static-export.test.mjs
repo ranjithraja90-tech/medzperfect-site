@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
 
 const exportedPages = [
@@ -27,4 +27,11 @@ test("includes GitHub Pages custom-domain files", async () => {
 
   assert.equal(cname.trim(), "medzperfect.com");
   assert.equal(noJekyll, "");
+});
+
+test("exports all optimized leadership portraits", async () => {
+  for (const name of ["anitha", "monisha", "karthik", "ranjith", "abishek"]) {
+    const portrait = await stat(new URL(`../dist/client/team/${name}.jpg`, import.meta.url));
+    assert.ok(portrait.size > 10_000, `${name}'s portrait should be a non-empty optimized image`);
+  }
 });

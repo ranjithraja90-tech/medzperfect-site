@@ -1,24 +1,25 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Footer, Header } from "../components/site-shell";
 
 const specialists = [
   {
-    initials: "KG",
-    name: "Karthik Gopalraj",
+    photo: "/team/karthik.jpg",
+    name: "Karthik",
     role: "VP, Customer Success",
     text: "A senior consultant focused on executive alignment, transition confidence and long-term account outcomes.",
     focus: "Stakeholder success · Solution shaping · Governance",
   },
   {
-    initials: "RR",
-    name: "Ranjith Raja R",
+    photo: "/team/ranjith.jpg",
+    name: "Ranjith",
     role: "VP, Sales",
     text: "Leads US market development, partnership design and the bridge between client priorities and delivery accountability.",
     focus: "Growth strategy · Partnerships · Executive engagement",
   },
   {
-    initials: "AD",
-    name: "Abishek D",
+    photo: "/team/abishek.jpg",
+    name: "Abishek",
     role: "VP, Learning & Development",
     text: "A senior trainer building role-based RCM learning, onboarding discipline and continuous quality calibration.",
     focus: "RCM academy · Coaching · Quality enablement",
@@ -54,10 +55,10 @@ export default function TeamPage() {
           <div className="container founders-grid">
             <article className="founder-card founder-anitha">
               <div className="founder-top">
-                <div className="avatar avatar-anitha">AG</div>
+                <div className="avatar avatar-photo"><Image src="/team/anitha.jpg" alt="Anitha" width={76} height={76} unoptimized /></div>
                 <div className="founder-title">
                   <span>Founder &amp; CEO</span>
-                  <h2>Anitha G</h2>
+                  <h2>Anitha</h2>
                   <strong>Chief Executive Officer</strong>
                 </div>
                 <div className="founder-mark">01</div>
@@ -76,10 +77,10 @@ export default function TeamPage() {
 
             <article className="founder-card founder-monisha">
               <div className="founder-top">
-                <div className="avatar avatar-monisha">MA</div>
+                <div className="avatar avatar-photo"><Image src="/team/monisha.jpg" alt="Monisha" width={76} height={76} unoptimized /></div>
                 <div className="founder-title">
                   <span>Co-founder</span>
-                  <h2>Monisha Anandakrishnan</h2>
+                  <h2>Monisha</h2>
                   <strong>VP, Operations</strong>
                 </div>
                 <div className="founder-mark">02</div>
@@ -106,7 +107,7 @@ export default function TeamPage() {
           <div className="container specialists-grid">
             {specialists.map((leader, index) => (
               <article className="specialist-card" key={leader.name}>
-                <div className="specialist-head"><div className={`avatar avatar-${index + 3}`}>{leader.initials}</div><span>0{index + 3}</span></div>
+                <div className="specialist-head"><div className="avatar avatar-photo"><Image src={leader.photo} alt={leader.name} width={58} height={58} unoptimized /></div><span>0{index + 3}</span></div>
                 <h3>{leader.name}</h3>
                 <strong>{leader.role}</strong>
                 <p>{leader.text}</p>

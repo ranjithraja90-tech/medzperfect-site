@@ -26,7 +26,11 @@ export function Header({ active }: { active: ActivePage }) {
       <div className="topbar">
         <div className="container topbar-inner">
           <span>AI-enabled revenue cycle partnership</span>
-          <div><a href="tel:+15417222194">US +1 541 7222194</a></div>
+          <div>
+            <a href="mailto:grow@medzperfect.com">Enquiries &amp; partnerships: grow@medzperfect.com</a>
+            <i aria-hidden="true" />
+            <a href="tel:+15417222194">US +1 541 7222194</a>
+          </div>
         </div>
       </div>
       <header className="site-header">
@@ -67,6 +71,16 @@ export function Footer() {
           <Link href="/contact">Contact</Link>
         </div>
         <div>
+          <h3>Connect</h3>
+          <p className="footer-connect-copy">For enquiries, partnerships and collaborations</p>
+          <a href="mailto:grow@medzperfect.com">grow@medzperfect.com</a>
+          <div className="social-links" aria-label="Medzperfect social media">
+            <a href="https://linkedin.com/company/medzperfect/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/medzperfect/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://x.com/Medzperfect" target="_blank" rel="noreferrer">X / Twitter</a>
+          </div>
+        </div>
+        <div>
           <h3>US office</h3>
           <address>1120 SW 5th Avenue<br />1st Floor<br />Portland, OR 97204, USA</address>
           <a href="tel:+15417222194">+1 541 7222194</a>
@@ -74,7 +88,7 @@ export function Footer() {
       </div>
       <div className="container footer-bottom">
         <span>© 2026 Medzperfect. All rights reserved.</span>
-        <span>Compliance readiness is subject to implementation and independent validation.</span>
+        <span>Enquiries · Partnerships · Collaborations</span>
       </div>
     </footer>
   );

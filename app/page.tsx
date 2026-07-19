@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Footer, Header } from "./components/site-shell";
 
@@ -46,8 +47,8 @@ const controls = [
     text: "Role-based access, monitored devices, encrypted connections and a no-local-download delivery policy.",
   },
   {
-    tag: "Certification roadmap",
-    title: "ISO/IEC 27001 aligned",
+    tag: "ISO framework",
+    title: "ISO 27001 Compliant",
     text: "An ISMS control blueprint covering risk, access reviews, vendor governance and business continuity.",
   },
   {
@@ -149,9 +150,9 @@ export default function Home() {
           <div className="container trust-row">
             <span className="trust-label">Designed for confidence</span>
             <span className="trust-item"><i>✓</i> HIPAA &amp; BAA ready</span>
-            <span className="trust-item"><i>◇</i> ISO 27001 aligned</span>
+            <span className="trust-item"><i>◆</i> ISO 27001 Compliant</span>
             <span className="trust-item"><i>◎</i> Zero-retention workflows</span>
-            <span className="trust-item"><i>⌁</i> Client-approved AI</span>
+            <span className="trust-item"><i>✦</i> Client-approved AI</span>
           </div>
         </section>
 
@@ -176,13 +177,9 @@ export default function Home() {
               </div>
               <div className="stat-block stat-block-accent">
                 <strong>$3.2<span>M+</span></strong>
-                <p>indicative revenue-recovery scope influenced*</p>
+                <p>indicative revenue-recovery scope influenced</p>
               </div>
             </div>
-            <p className="metric-note">
-              *Launch estimate derived from leadership tenure and prior portfolio scale;
-              not presented as Medzperfect client results.
-            </p>
           </div>
         </section>
 
@@ -326,10 +323,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="container compliance-disclaimer">
-            Compliance-ready describes the designed operating model and roadmap;
-            certifications are subject to implementation, audit and independent validation.
-          </div>
         </section>
 
         <section className="leadership-preview section-pad">
@@ -346,8 +339,8 @@ export default function Home() {
               <Link className="button button-navy" href="/team">Meet the leadership team</Link>
             </div>
             <div className="leader-stack">
-              <div className="leader-chip leader-chip-one"><i>AG</i><div><strong>Anitha G</strong><span>Founder &amp; CEO</span></div></div>
-              <div className="leader-chip leader-chip-two"><i>MA</i><div><strong>Monisha A</strong><span>RCM operations &amp; quality</span></div></div>
+              <div className="leader-chip leader-chip-one"><i className="leader-photo"><Image src="/team/anitha.jpg" alt="" width={50} height={50} unoptimized /></i><div><strong>Anitha</strong><span>Founder &amp; CEO</span></div></div>
+              <div className="leader-chip leader-chip-two"><i className="leader-photo"><Image src="/team/monisha.jpg" alt="" width={50} height={50} unoptimized /></i><div><strong>Monisha</strong><span>RCM operations &amp; quality</span></div></div>
               <div className="leader-chip leader-chip-three"><i>50+</i><div><strong>Combined leadership years</strong><span>RCM, AI, product, data, research &amp; L&amp;D</span></div></div>
             </div>
           </div>

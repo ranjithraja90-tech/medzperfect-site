@@ -25,19 +25,32 @@ for (const [pathname, expected] of [
     const html = await response.text();
     assert.match(html, new RegExp(expected, "i"));
     assert.match(html, /Medzperfect/);
+    assert.match(html, /mailto:grow@medzperfect\.com/);
+    assert.match(html, /https:\/\/linkedin\.com\/company\/medzperfect\//);
+    assert.match(html, /https:\/\/www\.instagram\.com\/medzperfect\//);
+    assert.match(html, /https:\/\/x\.com\/Medzperfect/);
     assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Starter Project/i);
   });
 }
 
-test("includes contact and compliance details", async () => {
-  const [home, contact] = await Promise.all([render("/"), render("/contact/")]);
+test("includes requested leadership, contact, and compliance details", async () => {
+  const [home, team, contact] = await Promise.all([render("/"), render("/team/"), render("/contact/")]);
   const homeHtml = await home.text();
+  const teamHtml = await team.text();
   const contactHtml = await contact.text();
   assert.match(homeHtml, /HIPAA-aligned operating model/);
-  assert.match(homeHtml, /ISO\/IEC 27001 aligned/);
+  assert.match(homeHtml, /ISO 27001 Compliant/);
   assert.match(homeHtml, /AI-enabled RCM/);
   assert.match(homeHtml, /Zero-retention/);
+  assert.match(homeHtml, /\/team\/anitha\.jpg/);
+  assert.match(homeHtml, /\/team\/monisha\.jpg/);
+  assert.doesNotMatch(homeHtml, /ISO(?:\/IEC)? 27001 aligned|Launch estimate derived|Compliance-ready describes/i);
   assert.doesNotMatch(homeHtml, /SOC\s*2|Chennai|Gandhi Nagar|India delivery/i);
+  for (const name of ["Anitha", "Monisha", "Karthik", "Ranjith", "Abishek"]) {
+    assert.match(teamHtml, new RegExp(`>${name}<`));
+    assert.match(teamHtml, new RegExp(`/team/${name.toLowerCase()}\\.jpg`));
+  }
+  assert.doesNotMatch(teamHtml, /Anitha G|Monisha Anandakrishnan|Monisha A|Karthik Gopalraj|Ranjith Raja R|Abishek D/);
   assert.match(contactHtml, /1120 SW 5th Avenue/);
   assert.match(contactHtml, /10\/2, First Floor, Gandhi Nagar/);
   assert.match(contactHtml, /\+1 541 7222194/);
