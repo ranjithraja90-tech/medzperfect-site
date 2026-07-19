@@ -15,8 +15,8 @@ async function render(pathname) {
 
 for (const [pathname, expected] of [
   ["/", "Recover every dollar"],
-  ["/team", "Built by people who know"],
-  ["/contact", "A clearer revenue cycle"],
+  ["/team/", "Built by people who know"],
+  ["/contact/", "A clearer revenue cycle"],
 ]) {
   test(`renders ${pathname}`, async () => {
     const response = await render(pathname);
@@ -30,7 +30,7 @@ for (const [pathname, expected] of [
 }
 
 test("includes contact and compliance details", async () => {
-  const [home, contact] = await Promise.all([render("/"), render("/contact")]);
+  const [home, contact] = await Promise.all([render("/"), render("/contact/")]);
   const homeHtml = await home.text();
   const contactHtml = await contact.text();
   assert.match(homeHtml, /HIPAA-aligned operating model/);

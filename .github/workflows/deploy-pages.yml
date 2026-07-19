@@ -29,6 +29,9 @@ jobs:
 
       - run: npm run build
 
+      - name: Verify exported pages
+        run: node --test tests/static-export.test.mjs
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
