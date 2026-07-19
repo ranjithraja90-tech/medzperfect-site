@@ -43,5 +43,11 @@ test("includes contact and compliance details", async () => {
   assert.match(contactHtml, /\+1 541 7222194/);
   assert.match(contactHtml, /\+91 96778 96274/);
   assert.match(contactHtml, /formsubmit\.co\/(?:ajax\/)?ranjith\.raja90@gmail\.com/);
+  assert.match(contactHtml, /Country calling code/);
+  assert.match(contactHtml, /option value="US" selected=""/);
+  assert.match(contactHtml, /United States/);
+  assert.match(contactHtml, /Choose a country code, then enter at least 7 digits/);
+  assert.match(contactHtml, /id="phone-number"[^>]*required/);
+  assert.match(contactHtml, /id="phone-number"[^>]*name="phone_number"/);
   assert.doesNotMatch(contactHtml, /SOC\s*2/i);
 });
