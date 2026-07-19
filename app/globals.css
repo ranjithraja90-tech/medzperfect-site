@@ -356,9 +356,7 @@ p { color: var(--slate); line-height: 1.72; }
 .phone-input-group { display: grid; gap: 8px; grid-template-columns: minmax(128px, .8fr) minmax(0, 1.2fr); }
 .phone-input-group select { min-width: 0; padding-left: 11px; padding-right: 8px; }
 .phone-input-group input[aria-invalid="true"] { border-color: #b42318; box-shadow: 0 0 0 3px rgba(180,35,24,.08); }
-.phone-help, .field-error { font-size: 8px; font-weight: 600; line-height: 1.35; }
-.phone-help { color: var(--slate); }
-.field-error { color: #b42318; min-height: 11px; }
+.field-error { color: #b42318; font-size: 8px; font-weight: 600; line-height: 1.35; min-height: 11px; }
 .form-honeypot { left: -9999px !important; position: absolute !important; }
 .full-field { grid-column: 1 / -1; }
 .form-footer { align-items: center; border-top: 1px solid var(--line); display: flex; gap: 20px; margin-top: 26px; padding-top: 24px; }

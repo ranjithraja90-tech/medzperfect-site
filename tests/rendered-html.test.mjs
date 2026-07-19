@@ -46,8 +46,13 @@ test("includes contact and compliance details", async () => {
   assert.match(contactHtml, /Country calling code/);
   assert.match(contactHtml, /option value="US" selected=""/);
   assert.match(contactHtml, /United States/);
-  assert.match(contactHtml, /Choose a country code, then enter at least 7 digits/);
   assert.match(contactHtml, /id="phone-number"[^>]*required/);
   assert.match(contactHtml, /id="phone-number"[^>]*name="phone_number"/);
+  assert.match(contactHtml, />Email<input[^>]*placeholder="you@healthcare\.com"/);
+  assert.match(contactHtml, /placeholder="Individual Practice\/Clinics\/Hospitals or Other Health providers"/);
+  assert.match(contactHtml, /type="hidden" name="_captcha" value="true"/);
+  assert.match(contactHtml, /name="_honey"/);
+  assert.doesNotMatch(contactHtml, /Choose a country code, then enter at least 7 digits/);
+  assert.doesNotMatch(contactHtml, /Work email|you@practice\.com|Practice or health system|_captcha[^>]*false/);
   assert.doesNotMatch(contactHtml, /SOC\s*2/i);
 });

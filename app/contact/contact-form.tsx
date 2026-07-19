@@ -60,7 +60,6 @@ export function ContactForm() {
     data.delete("phone_number");
     data.append("_subject", `Medzperfect revenue review request — ${name}`);
     data.append("_template", "table");
-    data.append("_captcha", "false");
     setIsSubmitting(true);
     setStatus("Sending your request…");
 
@@ -93,8 +92,9 @@ export function ContactForm() {
       </div>
       <div className="form-grid">
         <input className="form-honeypot" name="_honey" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+        <input name="_captcha" type="hidden" value="true" />
         <label>Full name<input name="name" type="text" autoComplete="name" required placeholder="Your name" /></label>
-        <label>Work email<input name="email" type="email" autoComplete="email" required placeholder="you@practice.com" /></label>
+        <label>Email<input name="email" type="email" autoComplete="email" required placeholder="you@healthcare.com" /></label>
         <div className="phone-field">
           <span className="form-label" id="phone-label">Phone number</span>
           <div className="phone-input-group">
@@ -110,7 +110,7 @@ export function ContactForm() {
             </select>
             <input
               id="phone-number"
-              aria-describedby="phone-help phone-error"
+              aria-describedby="phone-error"
               aria-invalid={phoneError ? "true" : "false"}
               aria-labelledby="phone-label"
               name="phone_number"
@@ -127,10 +127,9 @@ export function ContactForm() {
               onBlur={() => setPhoneError(validatePhoneNumber(phoneNumber, countryCode))}
             />
           </div>
-          <small className="phone-help" id="phone-help">Choose a country code, then enter at least 7 digits.</small>
           <small className="field-error" id="phone-error" aria-live="polite">{phoneError}</small>
         </div>
-        <label>Organization<input name="organization" type="text" autoComplete="organization" placeholder="Practice or health system" /></label>
+        <label>Organization<input name="organization" type="text" autoComplete="organization" placeholder="Individual Practice/Clinics/Hospitals or Other Health providers" /></label>
         <label className="full-field">What would you like to improve?
           <select name="interest" defaultValue="" required>
             <option value="" disabled>Select an area</option>
