@@ -290,19 +290,19 @@ p { color: var(--slate); line-height: 1.72; }
 .team-hero-proof div i { background: var(--teal); border-radius: 50%; display: inline-block; height: 5px; margin-top: 5px; width: 5px; }
 
 .founders-section { background: var(--white); }
-.founders-grid { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
-.founder-card { border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-sm); overflow: hidden; padding: 34px; position: relative; }
+.founders-grid { display: grid; gap: 28px; grid-template-columns: 1fr; }
+.founder-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: minmax(300px, .72fr) minmax(0, 1.28fr); overflow: hidden; position: relative; }
 .founder-card::before { background: linear-gradient(90deg, var(--blue), var(--teal)); content: ""; height: 4px; left: 0; position: absolute; right: 0; top: 0; }
 .founder-monisha::before { background: linear-gradient(90deg, var(--teal), var(--green)); }
-.founder-top { align-items: center; display: grid; gap: 16px; grid-template-columns: 78px 1fr auto; }
-.avatar { align-items: center; background: linear-gradient(140deg, var(--navy), var(--blue)); border-radius: 18px; color: var(--white); display: flex; font-family: var(--heading); font-size: 19px; font-weight: 750; height: 76px; justify-content: center; width: 76px; }
-.avatar-photo { overflow: hidden; }
-.avatar-photo img { height: 100%; object-fit: cover; width: 100%; }
+.founder-portrait { background: var(--ice); min-height: 390px; overflow: hidden; }
+.founder-portrait img { height: 100%; object-fit: cover; object-position: center 30%; width: 100%; }
+.founder-content { padding: 38px 42px; }
+.founder-top { align-items: start; display: flex; justify-content: space-between; }
 .founder-title > span { color: var(--teal); font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.founder-title h2 { font-size: 22px; margin: 3px 0 2px; }
-.founder-title strong { color: var(--blue); font-size: 11px; }
+.founder-title h2 { font-size: 31px; margin: 5px 0 3px; }
+.founder-title strong { color: var(--blue); font-size: 12px; }
 .founder-mark { color: var(--pale); font-family: var(--heading); font-size: 42px; font-weight: 800; }
-.founder-lead { border-bottom: 1px solid var(--line); font-size: 13px; margin: 30px 0 0; padding-bottom: 25px; }
+.founder-lead { border-bottom: 1px solid var(--line); font-size: 13px; margin: 25px 0 0; padding-bottom: 22px; }
 .bio-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; padding: 22px 0; }
 .bio-grid div { background: var(--ice); border-radius: 10px; padding: 15px; }
 .bio-grid span { color: var(--navy); display: block; font-family: var(--heading); font-size: 20px; font-weight: 750; }
@@ -315,14 +315,15 @@ p { color: var(--slate); line-height: 1.72; }
 
 .specialists-section { background: var(--ice); border-block: 1px solid var(--line); }
 .specialists-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
-.specialist-card { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 28px; }
-.specialist-head { align-items: flex-start; display: flex; justify-content: space-between; margin-bottom: 27px; }
-.specialist-head .avatar { border-radius: 13px; font-size: 15px; height: 58px; width: 58px; }
-.specialist-head > span { color: var(--pale); font-family: var(--heading); font-size: 31px; font-weight: 800; }
+.specialist-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; display: flex; flex-direction: column; overflow: hidden; }
+.specialist-portrait { aspect-ratio: 4 / 3; background: var(--pale); overflow: hidden; position: relative; }
+.specialist-portrait img { height: 100%; object-fit: cover; object-position: center 25%; width: 100%; }
+.specialist-portrait > span { align-items: center; backdrop-filter: blur(8px); background: rgba(5,23,47,.76); border: 1px solid rgba(255,255,255,.24); border-radius: 999px; color: var(--white); display: flex; font-family: var(--heading); font-size: 11px; font-weight: 800; height: 36px; justify-content: center; position: absolute; right: 16px; top: 16px; width: 42px; }
+.specialist-body { display: flex; flex: 1; flex-direction: column; padding: 25px 27px 27px; }
 .specialist-card h3 { font-size: 18px; margin-bottom: 4px; }
-.specialist-card > strong { color: var(--blue); font-size: 10px; }
-.specialist-card > p { font-size: 12px; min-height: 82px; }
-.focus-line { border-top: 1px solid var(--line); color: #77889b; font-size: 9px; line-height: 1.6; padding-top: 15px; }
+.specialist-body > strong { color: var(--blue); font-size: 10px; }
+.specialist-body > p { font-size: 12px; margin-bottom: 22px; }
+.focus-line { border-top: 1px solid var(--line); color: #77889b; font-size: 9px; line-height: 1.6; margin-top: auto; padding-top: 15px; }
 
 .principles-section { background: linear-gradient(130deg, var(--navy-deep), var(--navy)); color: var(--white); }
 .principles-grid { align-items: center; display: grid; gap: 90px; grid-template-columns: .8fr 1.2fr; }
@@ -412,7 +413,8 @@ p { color: var(--slate); line-height: 1.72; }
   .ai-usecase-grid { grid-template-columns: 1fr 1fr; }
   .controls-grid { grid-template-columns: 1fr 1fr; }
   .leader-stack { max-width: 620px; width: 100%; }
-  .founders-grid { grid-template-columns: 1fr; }
+  .founder-card { grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr); }
+  .founder-content { padding: 32px; }
   .principle-list > div { min-height: 210px; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -456,11 +458,11 @@ p { color: var(--slate); line-height: 1.72; }
   .footer-grid > div:last-child { grid-column: auto; }
   .footer-bottom { flex-direction: column; gap: 8px; }
   .page-hero h1 { font-size: 39px; }
-  .founder-card { padding: 25px; }
-  .founder-top { align-items: start; grid-template-columns: 66px 1fr; }
-  .founder-top .avatar { border-radius: 14px; height: 64px; width: 64px; }
+  .founder-card { grid-template-columns: 1fr; }
+  .founder-portrait { aspect-ratio: 1 / 1; min-height: 0; }
+  .founder-content { padding: 28px 24px 30px; }
   .founder-mark { display: none; }
-  .founder-title h2 { font-size: 18px; }
+  .founder-title h2 { font-size: 26px; }
   .bio-grid { grid-template-columns: 1fr; }
   .principle-list { grid-template-columns: 1fr; }
   .principle-list > div { border-bottom: 1px solid rgba(255,255,255,.12); border-left: 0; min-height: 0; padding: 23px 0; }

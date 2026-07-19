@@ -46,7 +46,7 @@ export default function TeamPage() {
           </div>
         </section>
 
-        <section className="founders-section section-pad">
+        <section id="operating-core" className="founders-section section-pad">
           <div className="container section-heading">
             <span className="eyebrow">The operating core</span>
             <h2>Deep delivery experience. Human leadership.</h2>
@@ -54,52 +54,60 @@ export default function TeamPage() {
           </div>
           <div className="container founders-grid">
             <article className="founder-card founder-anitha">
-              <div className="founder-top">
-                <div className="avatar avatar-photo"><Image src="/team/anitha.jpg" alt="Anitha" width={76} height={76} unoptimized /></div>
-                <div className="founder-title">
-                  <span>Founder &amp; CEO</span>
-                  <h2>Anitha</h2>
-                  <strong>Chief Executive Officer</strong>
+              <div className="founder-portrait">
+                <Image src="/team/anitha.jpg" alt="Anitha" width={420} height={420} loading="eager" unoptimized />
+              </div>
+              <div className="founder-content">
+                <div className="founder-top">
+                  <div className="founder-title">
+                    <span>Founder &amp; CEO</span>
+                    <h2>Anitha</h2>
+                    <strong>Chief Executive Officer</strong>
+                  </div>
+                  <div className="founder-mark">01</div>
                 </div>
-                <div className="founder-mark">01</div>
+                <p className="founder-lead">A client-facing RCM executive who combines account stewardship, delivery governance and hands-on revenue cycle leadership.</p>
+                <div className="bio-grid">
+                  <div><span>18+ years</span><p>across AR, RCM operations, account leadership and delivery governance</p></div>
+                  <div><span>Client-first</span><p>executive ownership from discovery and transition through steady-state delivery</p></div>
+                </div>
+                <ul className="expertise-list">
+                  <li>Client needs, status governance and executive communication</li>
+                  <li>Agile project delivery and cross-functional coordination</li>
+                  <li>Process improvement, mentoring and performance accountability</li>
+                </ul>
               </div>
-              <p className="founder-lead">A client-facing RCM executive who combines account stewardship, delivery governance and hands-on revenue cycle leadership.</p>
-              <div className="bio-grid">
-                <div><span>18+ years</span><p>across AR, RCM operations, account leadership and delivery governance</p></div>
-                <div><span>Client-first</span><p>executive ownership from discovery and transition through steady-state delivery</p></div>
-              </div>
-              <ul className="expertise-list">
-                <li>Client needs, status governance and executive communication</li>
-                <li>Agile project delivery and cross-functional coordination</li>
-                <li>Process improvement, mentoring and performance accountability</li>
-              </ul>
             </article>
 
             <article className="founder-card founder-monisha">
-              <div className="founder-top">
-                <div className="avatar avatar-photo"><Image src="/team/monisha.jpg" alt="Monisha" width={76} height={76} unoptimized /></div>
-                <div className="founder-title">
-                  <span>Co-founder</span>
-                  <h2>Monisha</h2>
-                  <strong>VP, Operations</strong>
+              <div className="founder-portrait">
+                <Image src="/team/monisha.jpg" alt="Monisha" width={420} height={420} loading="eager" unoptimized />
+              </div>
+              <div className="founder-content">
+                <div className="founder-top">
+                  <div className="founder-title">
+                    <span>Co-founder</span>
+                    <h2>Monisha</h2>
+                    <strong>VP, Operations</strong>
+                  </div>
+                  <div className="founder-mark">02</div>
                 </div>
-                <div className="founder-mark">02</div>
+                <p className="founder-lead">A scale-focused operations leader with deep experience in people management, billing, AR governance and quality.</p>
+                <div className="bio-grid">
+                  <div><span>200+ FTE</span><p>led across voice and non-voice operations</p></div>
+                  <div><span>95%+</span><p>prior team SLA and quality performance</p></div>
+                </div>
+                <ul className="expertise-list">
+                  <li>Healthcare operations, workforce planning and profitability</li>
+                  <li>ISO and SOX audit participation, BCP and process transition</li>
+                  <li>95%+ prior team SLA and quality performance</li>
+                </ul>
               </div>
-              <p className="founder-lead">A scale-focused operations leader with deep experience in people management, billing, AR governance and quality.</p>
-              <div className="bio-grid">
-                <div><span>200+ FTE</span><p>led across voice and non-voice operations</p></div>
-                <div><span>95%+</span><p>prior team SLA and quality performance</p></div>
-              </div>
-              <ul className="expertise-list">
-                <li>Healthcare operations, workforce planning and profitability</li>
-                <li>ISO and SOX audit participation, BCP and process transition</li>
-                <li>95%+ prior team SLA and quality performance</li>
-              </ul>
             </article>
           </div>
         </section>
 
-        <section className="specialists-section section-pad">
+        <section id="specialist-leadership" className="specialists-section section-pad">
           <div className="container two-column-intro">
             <div><span className="eyebrow">Specialist leadership</span><h2>Built to support the whole client journey.</h2></div>
             <p>From the first conversation to a stable delivery pod, each leader owns a distinct part of the partnership.</p>
@@ -107,11 +115,16 @@ export default function TeamPage() {
           <div className="container specialists-grid">
             {specialists.map((leader, index) => (
               <article className="specialist-card" key={leader.name}>
-                <div className="specialist-head"><div className="avatar avatar-photo"><Image src={leader.photo} alt={leader.name} width={58} height={58} unoptimized /></div><span>0{index + 3}</span></div>
-                <h3>{leader.name}</h3>
-                <strong>{leader.role}</strong>
-                <p>{leader.text}</p>
-                <div className="focus-line">{leader.focus}</div>
+                <div className="specialist-portrait">
+                  <Image src={leader.photo} alt={leader.name} width={380} height={300} loading="eager" unoptimized />
+                  <span>0{index + 3}</span>
+                </div>
+                <div className="specialist-body">
+                  <h3>{leader.name}</h3>
+                  <strong>{leader.role}</strong>
+                  <p>{leader.text}</p>
+                  <div className="focus-line">{leader.focus}</div>
+                </div>
               </article>
             ))}
           </div>
