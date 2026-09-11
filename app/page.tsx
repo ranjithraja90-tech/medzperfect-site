@@ -340,7 +340,7 @@ export default function Home() {
             </div>
             <div className="leader-stack">
               <div className="leader-chip leader-chip-one"><i className="leader-photo"><Image src="/team/anitha.jpg" alt="" width={50} height={50} unoptimized /></i><div><strong>Anitha</strong><span>Founder &amp; CEO</span></div></div>
-              <div className="leader-chip leader-chip-two"><i className="leader-photo"><Image src="/team/raja.jpg" alt="" width={50} height={50} unoptimized /></i><div><strong>Raja</strong><span>Medical coding &amp; quality</span></div></div>
+              <div className="leader-chip leader-chip-two"><i className="leader-photo"><Image src="/team/raja.jpg" alt="" width={50} height={50} unoptimized /></i><div><strong>Raja</strong><span>VP - Coding Operations</span></div></div>
               <div className="leader-chip leader-chip-three"><i>50+</i><div><strong>Combined leadership years</strong><span>RCM, AI, product, data, research &amp; L&amp;D</span></div></div>
             </div>
           </div>

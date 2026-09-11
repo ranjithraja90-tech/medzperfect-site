@@ -284,10 +284,9 @@ p { color: var(--slate); line-height: 1.72; }
 .page-hero p { color: #bed2e6; font-size: 16px; margin-bottom: 0; max-width: 700px; }
 .team-hero-proof, .contact-promise { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; padding: 30px; }
 .team-hero-proof > span, .contact-promise > span { color: #8bdcff; font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.team-hero-proof > strong { color: var(--white); display: block; font-family: var(--heading); font-size: 62px; letter-spacing: -.06em; margin: 22px 0; }
-.team-hero-proof > strong small { color: #9bb7cf; font-size: 15px; letter-spacing: 0; }
-.team-hero-proof div { color: #b8cde1; display: flex; flex-wrap: wrap; font-size: 10px; gap: 8px; }
-.team-hero-proof div i { background: var(--teal); border-radius: 50%; display: inline-block; height: 5px; margin-top: 5px; width: 5px; }
+.leadership-verticals { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; list-style: none; margin: 22px 0 0; padding: 0; }
+.leadership-verticals li { align-items: center; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 8px; color: #c9dbeb; display: flex; font-size: 10px; font-weight: 650; line-height: 1.35; min-height: 42px; padding: 8px 10px; }
+.leadership-verticals li::before { background: var(--teal); border-radius: 50%; content: ""; flex: 0 0 auto; height: 5px; margin-right: 8px; width: 5px; }
 
 .founders-section { background: var(--white); }
 .founders-grid { display: grid; gap: 28px; grid-template-columns: 1fr; }
@@ -304,6 +303,7 @@ p { color: var(--slate); line-height: 1.72; }
 .founder-mark { color: var(--pale); font-family: var(--heading); font-size: 42px; font-weight: 800; }
 .founder-lead { border-bottom: 1px solid var(--line); font-size: 13px; margin: 25px 0 0; padding-bottom: 22px; }
 .bio-grid { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; padding: 22px 0; }
+.bio-grid-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .bio-grid div { background: var(--ice); border-radius: 10px; padding: 15px; }
 .bio-grid span { color: var(--navy); display: block; font-family: var(--heading); font-size: 20px; font-weight: 750; }
 .bio-grid p { font-size: 9px; line-height: 1.45; margin: 3px 0 0; }

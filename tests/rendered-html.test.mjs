@@ -51,8 +51,14 @@ test("includes requested leadership, contact, and compliance details", async () 
     assert.match(teamHtml, new RegExp(`>${name}<`));
     assert.match(teamHtml, new RegExp(`/team/${name.toLowerCase()}\\.jpg`));
   }
-  assert.match(teamHtml, /16 years/);
-  assert.match(teamHtml, /CPC · CCS · CAIMC/);
+  assert.match(teamHtml, /VP - Coding Operations/);
+  assert.match(teamHtml, /20\+ years/);
+  assert.match(teamHtml, /16\+ years/);
+  assert.match(teamHtml, /7\+ years/);
+  for (const vertical of ["RCM &amp; AI", "Product &amp; data", "Research &amp; L&amp;D", "Coding", "Business consulting", "Business process optimization"]) {
+    assert.match(teamHtml, new RegExp(vertical, "i"));
+  }
+  assert.doesNotMatch(teamHtml, /Coding Manager|50\+<small> years/);
   assert.doesNotMatch(teamHtml, /Anitha G|Monisha(?: Anandakrishnan| A)?|SudalaiRaja|Sudalairaja|Karthik Gopalraj|Ranjith Raja R|Abishek D/);
   assert.match(contactHtml, /1120 SW 5th Avenue/);
   assert.match(contactHtml, /10\/2, First Floor, Gandhi Nagar/);

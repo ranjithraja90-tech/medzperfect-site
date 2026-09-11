@@ -40,8 +40,14 @@ export default function TeamPage() {
             </div>
             <div className="team-hero-proof">
               <span>Leadership experience</span>
-              <strong>50+<small> years</small></strong>
-              <div><i /> RCM &amp; AI <i /> Product &amp; data <i /> Research &amp; L&amp;D</div>
+              <ul className="leadership-verticals">
+                <li>RCM &amp; AI</li>
+                <li>Product &amp; data</li>
+                <li>Research &amp; L&amp;D</li>
+                <li>Coding</li>
+                <li>Business consulting</li>
+                <li>Business process optimization</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -88,19 +94,20 @@ export default function TeamPage() {
                   <div className="founder-title">
                     <span>Coding leadership</span>
                     <h2>Raja</h2>
-                    <strong>Coding Manager</strong>
+                    <strong>VP - Coding Operations</strong>
                   </div>
                   <div className="founder-mark">02</div>
                 </div>
-                <p className="founder-lead">A medical coding leader with 16 years of experience spanning hands-on coding, team management, denial management and quality auditing.</p>
-                <div className="bio-grid">
-                  <div><span>16 years</span><p>nine years in coding and seven years in management</p></div>
-                  <div><span>CPC · CCS · CAIMC</span><p>professional coding credentials across core and advanced disciplines</p></div>
+                <p className="founder-lead">A healthcare operations leader with 20+ years of overall experience, including 16+ years across medical coding and management and 7+ years in pharmacy.</p>
+                <div className="bio-grid bio-grid-three">
+                  <div><span>20+ years</span><p>overall healthcare experience</p></div>
+                  <div><span>16+ years</span><p>medical coding and management</p></div>
+                  <div><span>7+ years</span><p>pharmacy experience</p></div>
                 </div>
                 <ul className="expertise-list">
                   <li>Multi-specialty coding, denial management and quality audits</li>
                   <li>Coding education, physician communication and client reporting</li>
-                  <li>EMR workflows and Medicare, Medicaid and private-payer policy</li>
+                  <li>CPC, CCS and CAIMC certified with strong payer-policy knowledge</li>
                 </ul>
               </div>
             </article>
