@@ -30,8 +30,13 @@ test("includes GitHub Pages custom-domain files", async () => {
 });
 
 test("exports all optimized leadership portraits", async () => {
-  for (const name of ["anitha", "monisha", "karthik", "ranjith", "abishek"]) {
+  for (const name of ["anitha", "raja", "karthik", "ranjith", "abishek"]) {
     const portrait = await stat(new URL(`../dist/client/team/${name}.jpg`, import.meta.url));
     assert.ok(portrait.size > 10_000, `${name}'s portrait should be a non-empty optimized image`);
   }
+
+  await assert.rejects(
+    stat(new URL("../dist/client/team/monisha.jpg", import.meta.url)),
+    { code: "ENOENT" },
+  );
 });

@@ -50,7 +50,7 @@ export default function TeamPage() {
           <div className="container section-heading">
             <span className="eyebrow">The operating core</span>
             <h2>Deep delivery experience. Human leadership.</h2>
-            <p>Medzperfect&apos;s founders bring complementary strengths across client account leadership and scaled healthcare operations.</p>
+            <p>Medzperfect&apos;s operating leaders bring complementary strengths across client account leadership, medical coding and healthcare operations.</p>
           </div>
           <div className="container founders-grid">
             <article className="founder-card founder-anitha">
@@ -79,28 +79,28 @@ export default function TeamPage() {
               </div>
             </article>
 
-            <article className="founder-card founder-monisha">
+            <article className="founder-card founder-raja">
               <div className="founder-portrait">
-                <Image src="/team/monisha.jpg" alt="Monisha" width={420} height={420} loading="eager" unoptimized />
+                <Image src="/team/raja.jpg" alt="Raja" width={420} height={420} loading="eager" unoptimized />
               </div>
               <div className="founder-content">
                 <div className="founder-top">
                   <div className="founder-title">
-                    <span>Co-founder</span>
-                    <h2>Monisha</h2>
-                    <strong>VP, Operations</strong>
+                    <span>Coding leadership</span>
+                    <h2>Raja</h2>
+                    <strong>Coding Manager</strong>
                   </div>
                   <div className="founder-mark">02</div>
                 </div>
-                <p className="founder-lead">A scale-focused operations leader with deep experience in people management, billing, AR governance and quality.</p>
+                <p className="founder-lead">A medical coding leader with 16 years of experience spanning hands-on coding, team management, denial management and quality auditing.</p>
                 <div className="bio-grid">
-                  <div><span>200+ FTE</span><p>led across voice and non-voice operations</p></div>
-                  <div><span>95%+</span><p>prior team SLA and quality performance</p></div>
+                  <div><span>16 years</span><p>nine years in coding and seven years in management</p></div>
+                  <div><span>CPC · CCS · CAIMC</span><p>professional coding credentials across core and advanced disciplines</p></div>
                 </div>
                 <ul className="expertise-list">
-                  <li>Healthcare operations, workforce planning and profitability</li>
-                  <li>ISO and SOX audit participation, BCP and process transition</li>
-                  <li>95%+ prior team SLA and quality performance</li>
+                  <li>Multi-specialty coding, denial management and quality audits</li>
+                  <li>Coding education, physician communication and client reporting</li>
+                  <li>EMR workflows and Medicare, Medicaid and private-payer policy</li>
                 </ul>
               </div>
             </article>

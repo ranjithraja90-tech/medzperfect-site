@@ -293,7 +293,7 @@ p { color: var(--slate); line-height: 1.72; }
 .founders-grid { display: grid; gap: 28px; grid-template-columns: 1fr; }
 .founder-card { background: var(--white); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: minmax(300px, .72fr) minmax(0, 1.28fr); overflow: hidden; position: relative; }
 .founder-card::before { background: linear-gradient(90deg, var(--blue), var(--teal)); content: ""; height: 4px; left: 0; position: absolute; right: 0; top: 0; }
-.founder-monisha::before { background: linear-gradient(90deg, var(--teal), var(--green)); }
+.founder-raja::before { background: linear-gradient(90deg, var(--teal), var(--green)); }
 .founder-portrait { background: var(--ice); min-height: 390px; overflow: hidden; }
 .founder-portrait img { height: 100%; object-fit: cover; object-position: center 30%; width: 100%; }
 .founder-content { padding: 38px 42px; }

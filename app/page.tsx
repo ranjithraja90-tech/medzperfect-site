@@ -331,8 +331,8 @@ export default function Home() {
               <span className="eyebrow">Leadership</span>
               <h2>Operators, not observers.</h2>
               <p>
-                Anitha and Monisha bring hands-on experience across client delivery,
-                AR, medical billing, transition and scaled operations—supported by a
+                Anitha and Raja bring hands-on experience across client delivery,
+                AR, medical billing, multi-specialty coding and quality—supported by a
                 leadership collective spanning AI-enabled RCM, product engineering,
                 databases, ETL, research, customer success, sales and L&amp;D.
               </p>
@@ -340,7 +340,7 @@ export default function Home() {
             </div>
             <div className="leader-stack">
               <div className="leader-chip leader-chip-one"><i className="leader-photo"><Image src="/team/anitha.jpg" alt="" width={50} height={50} unoptimized /></i><div><strong>Anitha</strong><span>Founder &amp; CEO</span></div></div>
-              <div className="leader-chip leader-chip-two"><i className="leader-photo"><Image src="/team/monisha.jpg" alt="" width={50} height={50} unoptimized /></i><div><strong>Monisha</strong><span>RCM operations &amp; quality</span></div></div>
+              <div className="leader-chip leader-chip-two"><i className="leader-photo"><Image src="/team/raja.jpg" alt="" width={50} height={50} unoptimized /></i><div><strong>Raja</strong><span>Medical coding &amp; quality</span></div></div>
               <div className="leader-chip leader-chip-three"><i>50+</i><div><strong>Combined leadership years</strong><span>RCM, AI, product, data, research &amp; L&amp;D</span></div></div>
             </div>
           </div>

@@ -29,6 +29,7 @@ for (const [pathname, expected] of [
     assert.match(html, /https:\/\/linkedin\.com\/company\/medzperfect\//);
     assert.match(html, /https:\/\/www\.instagram\.com\/medzperfect\//);
     assert.match(html, /https:\/\/x\.com\/Medzperfect/);
+    assert.doesNotMatch(html, /Monisha|\/team\/monisha\.jpg|SudalaiRaja|Sudalairaja/);
     assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Starter Project/i);
   });
 }
@@ -43,14 +44,16 @@ test("includes requested leadership, contact, and compliance details", async () 
   assert.match(homeHtml, /AI-enabled RCM/);
   assert.match(homeHtml, /Zero-retention/);
   assert.match(homeHtml, /\/team\/anitha\.jpg/);
-  assert.match(homeHtml, /\/team\/monisha\.jpg/);
+  assert.match(homeHtml, /\/team\/raja\.jpg/);
   assert.doesNotMatch(homeHtml, /ISO(?:\/IEC)? 27001 aligned|Launch estimate derived|Compliance-ready describes/i);
   assert.doesNotMatch(homeHtml, /SOC\s*2|Chennai|Gandhi Nagar|India delivery/i);
-  for (const name of ["Anitha", "Monisha", "Karthik", "Ranjith", "Abishek"]) {
+  for (const name of ["Anitha", "Raja", "Karthik", "Ranjith", "Abishek"]) {
     assert.match(teamHtml, new RegExp(`>${name}<`));
     assert.match(teamHtml, new RegExp(`/team/${name.toLowerCase()}\\.jpg`));
   }
-  assert.doesNotMatch(teamHtml, /Anitha G|Monisha Anandakrishnan|Monisha A|Karthik Gopalraj|Ranjith Raja R|Abishek D/);
+  assert.match(teamHtml, /16 years/);
+  assert.match(teamHtml, /CPC · CCS · CAIMC/);
+  assert.doesNotMatch(teamHtml, /Anitha G|Monisha(?: Anandakrishnan| A)?|SudalaiRaja|Sudalairaja|Karthik Gopalraj|Ranjith Raja R|Abishek D/);
   assert.match(contactHtml, /1120 SW 5th Avenue/);
   assert.match(contactHtml, /10\/2, First Floor, Gandhi Nagar/);
   assert.match(contactHtml, /\+1 541 7222194/);
