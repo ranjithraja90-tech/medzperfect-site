@@ -29,8 +29,8 @@ jobs:
 
       - run: npm run build
 
-      - name: Verify exported pages
-        run: node --test tests/static-export.test.mjs
+      - name: Verify exported pages and content
+        run: node --test tests/*.test.mjs
 
       - uses: actions/configure-pages@v5
 

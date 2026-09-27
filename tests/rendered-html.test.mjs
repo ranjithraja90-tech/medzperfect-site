@@ -17,6 +17,7 @@ for (const [pathname, expected] of [
   ["/", "Recover every dollar"],
   ["/team/", "Built by people who know"],
   ["/contact/", "A clearer revenue cycle"],
+  ["/cookie-policy/", "Cookie policy"],
 ]) {
   test(`renders ${pathname}`, async () => {
     const response = await render(pathname);
@@ -77,4 +78,32 @@ test("includes requested leadership, contact, and compliance details", async () 
   assert.doesNotMatch(contactHtml, /Choose a country code, then enter at least 7 digits/);
   assert.doesNotMatch(contactHtml, /Work email|you@practice\.com|Practice or health system|_captcha[^>]*false/);
   assert.doesNotMatch(contactHtml, /SOC\s*2/i);
+  assert.match(homeHtml, /30-day free trial/);
+  assert.match(homeHtml, /Convert on proven targets/);
+  assert.match(contactHtml, /30-day free trial for eligible customers/);
+  assert.match(contactHtml, /30-day free RCM trial consultation/);
+});
+
+test("exports the analytics disclosure without an active tracking script", async () => {
+  const policy = await render("/cookie-policy/");
+  const policyHtml = await policy.text();
+  assert.match(policyHtml, /Microsoft Clarity analytics/);
+  assert.match(policyHtml, /_clck/);
+  assert.match(policyHtml, /_clsk/);
+  assert.match(policyHtml, /_cltk/);
+  assert.match(policyHtml, /deny advertising storage consent/);
+  assert.match(policyHtml, /masked session recordings/);
+  assert.doesNotMatch(policyHtml, /<script[^>]+src="https:\/\/www\.clarity\.ms/);
+});
+
+test("preloads only the two critical self-hosted fonts", async () => {
+  const response = await render("/");
+  const html = await response.text();
+  const fontPreloads = html.match(/<link\b[^>]*as="font"[^>]*>/g) ?? [];
+  // React/vinext may also hoist preload tags; duplicate URLs are one request.
+  const uniqueFonts = new Set(fontPreloads.map((tag) => tag.match(/href="([^"]+)"/)?.[1]));
+  assert.equal(uniqueFonts.size, 2);
+  assert.match(fontPreloads.join(""), /\/fonts\/inter-latin\.woff2/);
+  assert.match(fontPreloads.join(""), /\/fonts\/poppins-latin-700\.woff2/);
+  assert.doesNotMatch(html, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
 });

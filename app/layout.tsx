@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { CookieConsent } from "./components/cookie-consent";
 import "./globals.css";
 
-const inter = Inter({ variable: "--font-body", subsets: ["latin"] });
-const poppins = Poppins({ variable: "--font-heading", subsets: ["latin"], weight: ["600", "700", "800"] });
 const siteUrl = new URL("https://medzperfect.com");
 
 export const metadata: Metadata = {
@@ -29,5 +27,16 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: "#0A2E5C", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${inter.variable} ${poppins.variable}`}>{children}</body></html>;
+  return (
+    <html lang="en">
+      <head>
+        <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/poppins-latin-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
+      <body>
+        {children}
+        <CookieConsent />
+      </body>
+    </html>
+  );
 }

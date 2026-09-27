@@ -6,6 +6,7 @@ const exportedPages = [
   ["index.html", "Recover every dollar"],
   ["team/index.html", "Built by people who know"],
   ["contact/index.html", "A clearer revenue cycle"],
+  ["cookie-policy/index.html", "Cookie policy"],
 ];
 
 for (const [relativePath, expectedContent] of exportedPages) {

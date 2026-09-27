@@ -84,11 +84,15 @@ export function ContactForm() {
   }
 
   return (
-    <form className="contact-form" action="https://formsubmit.co/ranjith.raja90@gmail.com" method="POST" onSubmit={handleSubmit} aria-busy={isSubmitting}>
+    <form className="contact-form" data-clarity-mask="true" action="https://formsubmit.co/ranjith.raja90@gmail.com" method="POST" onSubmit={handleSubmit} aria-busy={isSubmitting}>
       <div className="form-heading">
         <span>Free revenue review</span>
         <h2>Tell us where revenue is getting stuck.</h2>
         <p>We&apos;ll respond within one US business day.</p>
+      </div>
+      <div className="trial-form-note">
+        <strong>Ask about trial eligibility</strong>
+        <p>Eligible customers may receive a 30-day free trial of full or partial RCM services. The trial starts after consultation and required HIPAA-aligned agreements are executed. The contract commits to paid services at agreed pricing when the agreed targets are achieved.</p>
       </div>
       <div className="form-grid">
         <input className="form-honeypot" name="_honey" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
@@ -139,6 +143,7 @@ export function ContactForm() {
             <option>Eligibility & prior authorization</option>
             <option>Coding & charge review</option>
             <option>Performance reporting</option>
+            <option>30-day free RCM trial consultation</option>
           </select>
         </label>
         <label className="full-field">A little context<textarea name="message" rows={5} placeholder="Tell us about your current challenge, payer mix or AR ageing. Please do not include patient information." /></label>

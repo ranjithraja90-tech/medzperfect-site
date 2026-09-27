@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "./components/site-link";
 import { Footer, Header } from "./components/site-shell";
 
 const services = [
@@ -238,6 +238,27 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="trial-section section-pad-sm" aria-labelledby="trial-heading">
+          <div className="container trial-card">
+            <div className="trial-intro">
+              <span className="trial-pill">For eligible customers</span>
+              <span className="eyebrow">A measured way to begin</span>
+              <h2 id="trial-heading">Prove the operating model before scaling it.</h2>
+              <p>
+                Following an initial consultation, eligible healthcare organizations may begin with a
+                30-day free trial across the full revenue cycle or selected RCM stages aligned to account-growth priorities.
+              </p>
+              <Link className="button button-navy" href="/contact">Discuss trial eligibility <span aria-hidden="true">↗</span></Link>
+            </div>
+            <ol className="trial-steps">
+              <li><span>01</span><div><strong>Consult and qualify</strong><p>Agree the priority workflow, baseline and measurable outcomes.</p></div></li>
+              <li><span>02</span><div><strong>Contract before access</strong><p>The 30-day window starts only after required agreements, including the applicable HIPAA business associate agreement and access safeguards, are in place.</p></div></li>
+              <li><span>03</span><div><strong>Convert on proven targets</strong><p>The signed contract commits both parties to the agreed paid services when the consultation-defined success targets are achieved.</p></div></li>
+            </ol>
+          </div>
+          <p className="container trial-note">Eligibility, scope, target definitions and conversion terms are confirmed during consultation and governed by the executed agreement.</p>
+        </section>
+
         <section className="recovery-section section-pad">
           <div className="container recovery-grid">
             <div className="recovery-copy">
@@ -368,6 +389,10 @@ export default function Home() {
               <details>
                 <summary>How quickly can a team be mobilized?<span>+</span></summary>
                 <p>A pilot pod can typically be planned in two to four weeks after access, workflow and compliance requirements are agreed.</p>
+              </details>
+              <details>
+                <summary>How does the 30-day free trial work?<span>+</span></summary>
+                <p>Eligible customers can trial the full cycle or selected RCM stages after consultation and required HIPAA-aligned contracting. The 30-day window begins only after those agreements are executed. Before the trial starts, the contract defines the success targets, how they are measured, and the commitment to paid services at the agreed pricing when those targets are achieved.</p>
               </details>
             </div>
           </div>

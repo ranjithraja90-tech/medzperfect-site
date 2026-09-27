@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "./site-link";
 
 type ActivePage = "home" | "team" | "contact";
 
@@ -69,6 +69,7 @@ export function Footer() {
           <Link href="/#services">Services</Link>
           <Link href="/team">Leadership</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/cookie-policy">Cookie policy</Link>
         </div>
         <div>
           <h3>Connect</h3>

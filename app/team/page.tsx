@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "../components/site-link";
 import { Footer, Header } from "../components/site-shell";
 
 const specialists = [
@@ -61,7 +61,7 @@ export default function TeamPage() {
           <div className="container founders-grid">
             <article className="founder-card founder-anitha">
               <div className="founder-portrait">
-                <Image src="/team/anitha.jpg" alt="Anitha" width={420} height={420} loading="eager" unoptimized />
+                <Image src="/team/anitha.jpg" alt="Anitha" width={420} height={420} loading="lazy" unoptimized />
               </div>
               <div className="founder-content">
                 <div className="founder-top">
@@ -87,7 +87,7 @@ export default function TeamPage() {
 
             <article className="founder-card founder-raja">
               <div className="founder-portrait">
-                <Image src="/team/raja.jpg" alt="Raja" width={420} height={420} loading="eager" unoptimized />
+                <Image src="/team/raja.jpg" alt="Raja" width={420} height={420} loading="lazy" unoptimized />
               </div>
               <div className="founder-content">
                 <div className="founder-top">

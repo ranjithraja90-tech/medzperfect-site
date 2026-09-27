@@ -17,6 +17,7 @@ export default function ContactPage() {
                 <div><span>01</span><strong>No PHI in discovery</strong><p>We start with de-identified workflow and performance information.</p></div>
                 <div><span>02</span><strong>BAA before access</strong><p>Protected information is handled only after engagement controls are agreed.</p></div>
                 <div><span>03</span><strong>Access by role</strong><p>Delivery access follows minimum-necessary job responsibilities.</p></div>
+                <div><span>04</span><strong>30-day free trial for eligible customers</strong><p>Full-cycle or focused RCM support, selected around your account-growth needs. The trial window starts after required agreements are executed; the contract commits to paid services at agreed pricing when the consultation-defined targets are achieved.</p></div>
               </div>
             </aside>
           </div>
